@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --glass-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* 毛玻璃特效 */
+.glass-header, .glass-footer {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 个人信息卡片 */
+.profile-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+}
+
+/* 项目网格布局 */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* 技能标签云 */
+.skill-cloud .tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
