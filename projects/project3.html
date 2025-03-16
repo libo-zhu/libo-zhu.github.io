@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>古文物三维重建与数字化研究</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/card.css">
+</head>
+<body>
+  <!-- 页眉 -->
+  <header>
+    <div class="container">
+      <h1>古文物三维重建与数字化研究</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../index.html#algo-projects">返回算法项目列表</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 项目详情 -->
+  <section id="project-detail" class="container">
+    <h2>项目简介</h2>
+    <p>
+      本项目利用 FFmpeg、Colmap 及开源 Instant-NGP 模型，对上海大学展出的青铜文物进行三维重建与数字化处理，生成高精度的 3D 模型。
+    </p>
+    <h3>技术栈</h3>
+    <p>工具：FFmpeg / Colmap / Instant-NGP<br>语言：Python</p>
+    <h3>主要职责</h3>
+    <ul>
+      <li>负责文物数据采集，使用大疆设备录制视频并提取图像帧。</li>
+      <li>利用 Colmap 计算相机位姿，构建数据集。</li>
+      <li>将处理后的数据输入 Instant-NGP，实现文物三维重建。</li>
+      <li>对生成模型进行后期处理，输出标准 OBJ 格式。</li>
+    </ul>
+
+    <!-- 图片展示区域 -->
+    <h3>项目图片</h3>
+    <p>请在 <code>assets/project3</code> 目录中添加相关图片，扩展 <code>&lt;img&gt;</code> 标签以展示效果。</p>
+    <div class="project-images">
+      <!-- 示例图片标签 -->
+      <img src="../assets/project3/placeholder.jpg" alt="项目三维重建图片示例">
+      <!-- 可扩展更多图片 -->
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <p><a href="../index.html">返回首页</a></p>
+    </div>
+  </footer>
+  <script src="../js/script.js"></script>
+</body>
+</html>

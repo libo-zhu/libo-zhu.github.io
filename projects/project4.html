@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>全景图像质量评价算法</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/card.css">
+</head>
+<body>
+  <!-- 页眉 -->
+  <header>
+    <div class="container">
+      <h1>全景图像质量评价算法</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../index.html#algo-projects">返回算法项目列表</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 项目详情 -->
+  <section id="project-detail" class="container">
+    <h2>项目简介</h2>
+    <p>
+      本项目针对全景图像设计了一种基于 CNN 的多视口质量评价模型。通过设计视口提取算法和主观实验，取得了较高的 SROCC 指标。
+    </p>
+    <h3>技术栈</h3>
+    <p>工具：Pytorch / Scikit-learn / Numpy / Matplotlib<br>语言：Python</p>
+    <h3>主要职责</h3>
+    <ul>
+      <li>设计全景图像的视口提取算法，对每张图提取多个视口。</li>
+      <li>组织主观实验，采集评分数据，计算 MOS 值。</li>
+      <li>基于预训练模型设计加权多视口 CNN，实现质量预测。</li>
+      <li>分析实验结果并调优模型参数。</li>
+    </ul>
+
+    <!-- 图片展示区域 -->
+    <h3>项目图片</h3>
+    <p>请在 <code>assets/project4</code> 目录下添加项目相关图片，并按需增加 <code>&lt;img&gt;</code> 标签。</p>
+    <div class="project-images">
+      <!-- 示例图片标签 -->
+      <img src="../assets/project4/placeholder.jpg" alt="项目质量评价图片示例">
+      <!-- 可扩展更多图片 -->
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <p><a href="../index.html">返回首页</a></p>
+    </div>
+  </footer>
+  <script src="../js/script.js"></script>
+</body>
+</html>
