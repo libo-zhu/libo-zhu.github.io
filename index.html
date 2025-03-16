@@ -5,217 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>zhulibo's personal website</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/card.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-    /* 重置样式 */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #f8cdda, #1c92d2);
-      color: #333;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* 页眉 */
-    header {
-      background: url('https://via.placeholder.com/1200x300?text=%E6%98%A5%E5%AD%A3%E6%B0%B4%E6%99%B6') no-repeat center center;
-      background-size: cover;
-      padding: 40px 0;
-      position: relative;
-    }
-    /* 页眉容器：居中标题，并为头像预留位置 */
-    .header-container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      text-align: center;
-      color: #131111;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      position: relative;
-    }
-    /* 标题 */
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    /* 头像样式：圆形，右侧 */
-    .avatar {
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    /* 导航 */
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    nav ul li a {
-      color: #3d73cf;
-      text-decoration: none;
-      font-size: 20px;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #ffd700;
-    }
-
-    /* 通用容器 */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      animation: fadeIn 0.8s ease-out;
-    }
-
-    /* 各区块样式 */
-    section {
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-    }
-    hr {
-      border: 0;
-      height: 2px;
-      background: #ccc;
-      margin: 40px 0;
-    }
-    section h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
-    }
-    section h3 {
-      font-size: 24px;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-
-    /* 关于我部分：结构化排版 */
-    .personal-info, .tech-stack {
-      margin-bottom: 20px;
-      padding-left: 20px;
-    }
-    .personal-info .info-item {
-      margin-bottom: 5px;
-      font-size: 18px;
-    }
-    .tech-stack ul {
-      list-style: disc inside;
-      font-size: 16px;
-      line-height: 1.8;
-    }
-    .tech-stack ul li {
-      margin-bottom: 10px;
-    }
-
-    /* Intro区块 - 图片与文字并排 */
-    #intro {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 20px;
-    }
-    #intro > div {
-      flex: 1;
-    }
-    #intro img {
-      max-width: 300px;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-    #intro img:hover {
-      transform: scale(1.05);
-    }
-
-    /* 项目列表：左对齐，每个项目占一行 */
-    .project-section {
-      text-align: left;
-    }
-    .project-item {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: #f9f9f9;
-      border-left: 4px solid #007BFF;
-      transition: background 0.3s, transform 0.3s;
-      animation: slideIn 0.5s ease-out;
-    }
-    .project-item:hover {
-      background: #e9f7ff;
-      transform: translateX(10px);
-    }
-    .project-item p {
-      margin-bottom: 5px;
-    }
-    .project-item a {
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: bold;
-    }
-    .project-item a:hover {
-      text-decoration: underline;
-    }
-
-    /* 切换按钮样式 */
-    .lang-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: #19a4cb;
-      color: #fff;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: background-color 0.3s, transform 0.3s;
-      z-index: 1000;
-    }
-    .lang-toggle:hover {
-      background-color: #0056b3;
-      transform: scale(1.05);
-    }
-
-    /* 页脚 */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #444;
-      color: #fff;
-    }
-
-    /* 动画 */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-  </style>
 </head>
 <body>
   <!-- 切换语言按钮 -->
@@ -223,7 +12,6 @@
 
   <!-- 英文版本 -->
   <div id="lang-en">
-    <!-- Header -->
     <header>
       <div class="container header-container">
         <h1>zhulibo</h1>
@@ -252,6 +40,7 @@
       <!-- About Me -->
       <section id="about">
         <h2>About Me</h2>
+        <!-- 姓名、学校、专业在同一行显示 -->
         <div class="personal-info">
           <div class="info-item"><strong>Name:</strong> Zhu Libo</div>
           <div class="info-item"><strong>University:</strong> Shanghai University</div>
@@ -269,38 +58,60 @@
       </section>
       <hr>
 
-      <!-- Development Practices -->
+      <!-- Projects -->
       <section id="projects" class="project-section">
         <h2>Development Practices</h2>
         <div class="project-item">
           <p><strong>Tongyun Huishi — Ancient Bronze Intelligent Identification and Learning Platform</strong></p>
           <p>Collaboratively built front-end and back-end to create a smooth experience and efficient data management system.</p>
+          <!-- 三张图片展示区域 -->
+          <div class="project-images">
+            <img src="assets/project1_img1.jpg" alt="Project 1 Image 1">
+            <img src="assets/project1_img2.jpg" alt="Project 1 Image 2">
+            <img src="assets/project1_img3.jpg" alt="Project 1 Image 3">
+          </div>
           <a href="projects/project1.html">View Details</a>
         </div>
         <div class="project-item">
           <p><strong>Multi-source Meteorological Data Visualization and Analysis Platform</strong></p>
           <p>Integrates historical and real-time meteorological data to achieve intuitive interaction and data presentation.</p>
+          <div class="project-images">
+            <img src="assets/project5_img1.jpg" alt="Project 5 Image 1">
+            <img src="assets/project5_img2.jpg" alt="Project 5 Image 2">
+            <img src="assets/project5_img3.jpg" alt="Project 5 Image 3">
+          </div>
           <a href="projects/project5.html">View Details</a>
         </div>
-      </section>
-      <hr>
 
-      <!-- Algorithm Research -->
-      <section id="algorithm" class="project-section">
         <h2>Algorithm Research</h2>
         <div class="project-item">
           <p><strong>Research on Ancient Bronze Classification and Dating Algorithms</strong></p>
           <p>Based on deep learning technology, conducts high-precision classification and dating analysis of bronze images.</p>
+          <div class="project-images">
+            <img src="assets/project2_img1.jpg" alt="Project 2 Image 1">
+            <img src="assets/project2_img2.jpg" alt="Project 2 Image 2">
+            <img src="assets/project2_img3.jpg" alt="Project 2 Image 3">
+          </div>
           <a href="projects/project2.html">View Details</a>
         </div>
         <div class="project-item">
           <p><strong>3D Reconstruction and Digitization of Ancient Artifacts</strong></p>
           <p>Utilizes NeRF and 3D reconstruction technology to digitally restore historical artifacts.</p>
+          <div class="project-images">
+            <img src="assets/project3_img1.jpg" alt="Project 3 Image 1">
+            <img src="assets/project3_img2.jpg" alt="Project 3 Image 2">
+            <img src="assets/project3_img3.jpg" alt="Project 3 Image 3">
+          </div>
           <a href="projects/project3.html">View Details</a>
         </div>
         <div class="project-item">
           <p><strong>Research on Panoramic Image Quality Assessment Algorithms</strong></p>
           <p>Designs a multi-viewport quality assessment algorithm based on CNN models to achieve objective evaluation of image quality.</p>
+          <div class="project-images">
+            <img src="assets/project4_img1.jpg" alt="Project 4 Image 1">
+            <img src="assets/project4_img2.jpg" alt="Project 4 Image 2">
+            <img src="assets/project4_img3.jpg" alt="Project 4 Image 3">
+          </div>
           <a href="projects/project4.html">View Details</a>
         </div>
       </section>
@@ -320,7 +131,6 @@
 
   <!-- 中文版本 -->
   <div id="lang-zh" style="display: none;">
-    <!-- 页眉 -->
     <header>
       <div class="container header-container">
         <h1>朱力波</h1>
@@ -366,44 +176,65 @@
       </section>
       <hr>
 
-      <!-- 开发实践 -->
+      <!-- 项目展示 -->
       <section id="projects" class="project-section">
         <h2>开发实践</h2>
         <div class="project-item">
           <p><strong>铜韵慧识————古青铜智能鉴定与学习平台</strong></p>
           <p>前后端协同构建，打造流畅体验与高效数据管理系统。</p>
+          <div class="project-images">
+            <img src="assets/project1_img1.jpg" alt="项目1图片1">
+            <img src="assets/project1_img2.jpg" alt="项目1图片2">
+            <img src="assets/project1_img3.jpg" alt="项目1图片3">
+          </div>
           <a href="projects/project1.html">查看详情</a>
         </div>
         <div class="project-item">
           <p><strong>多源气象数据可视化分析平台</strong></p>
           <p>整合历史与实时气象数据，实现直观交互与数据展示。</p>
+          <div class="project-images">
+            <img src="assets/project5_img1.jpg" alt="项目5图片1">
+            <img src="assets/project5_img2.jpg" alt="项目5图片2">
+            <img src="assets/project5_img3.jpg" alt="项目5图片3">
+          </div>
           <a href="projects/project5.html">查看详情</a>
         </div>
-      </section>
-      <hr>
 
-      <!-- 算法研究 -->
-      <section id="algorithm" class="project-section">
         <h2>算法研究</h2>
         <div class="project-item">
           <p><strong>古青铜分类断代算法研究</strong></p>
           <p>基于深度学习技术，对青铜器图像进行高精度分类与断代分析。</p>
+          <div class="project-images">
+            <img src="assets/project2_img1.jpg" alt="项目2图片1">
+            <img src="assets/project2_img2.jpg" alt="项目2图片2">
+            <img src="assets/project2_img3.jpg" alt="项目2图片3">
+          </div>
           <a href="projects/project2.html">查看详情</a>
         </div>
         <div class="project-item">
           <p><strong>古文物三维重建与数字化</strong></p>
           <p>运用 NeRF 与 3D 重建技术，将历史文物数字化还原。</p>
+          <div class="project-images">
+            <img src="assets/project3_img1.jpg" alt="项目3图片1">
+            <img src="assets/project3_img2.jpg" alt="项目3图片2">
+            <img src="assets/project3_img3.jpg" alt="项目3图片3">
+          </div>
           <a href="projects/project3.html">查看详情</a>
         </div>
         <div class="project-item">
           <p><strong>全景图像质量评价算法研究</strong></p>
           <p>基于 CNN 模型，设计多视口质量评价算法，实现图像质量客观评估。</p>
+          <div class="project-images">
+            <img src="assets/project4_img1.jpg" alt="项目4图片1">
+            <img src="assets/project4_img2.jpg" alt="项目4图片2">
+            <img src="assets/project4_img3.jpg" alt="项目4图片3">
+          </div>
           <a href="projects/project4.html">查看详情</a>
         </div>
       </section>
       <hr>
 
-      <!-- 联系我 -->
+      <!-- 联系方式 -->
       <section id="contact">
         <h2>联系方式</h2>
         <p>邮箱: <a href="mailto:2295894399@qq.com">2295894399@qq.com</a></p>
@@ -422,12 +253,10 @@
 
     toggleBtn.addEventListener('click', () => {
       if (langEn.style.display === 'none') {
-        // 当前显示中文，切换到英文
         langEn.style.display = 'block';
         langZh.style.display = 'none';
         toggleBtn.textContent = '中文';
       } else {
-        // 当前显示英文，切换到中文
         langEn.style.display = 'none';
         langZh.style.display = 'block';
         toggleBtn.textContent = 'English';
