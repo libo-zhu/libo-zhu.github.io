@@ -4,97 +4,227 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>zhulibo的个人主页</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/card.css">
+  <style>
+    /* 重置样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      color: #333;
+      line-height: 1.6;
+    }
+    /* 页眉 */
+    header {
+      background: url('https://via.placeholder.com/1200x300?text=%E6%98%A5%E5%AD%A3%E6%B0%B4%E6%99%B6') no-repeat center center;
+      background-size: cover;
+      padding: 30px 0;
+    }
+    header .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+    /* 通用容器 */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    /* 各区块样式 */
+    section {
+      margin-bottom: 40px;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ccc;
+      margin: 40px 0;
+    }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    /* Intro区块 - 图片与文字并排 */
+    #intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+    #intro > div {
+      flex: 1;
+    }
+    #intro img {
+      max-width: 300px;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    #intro img:hover {
+      transform: scale(1.05);
+    }
+    /* 项目列表：左对齐，每个项目占一行 */
+    .project-section {
+      text-align: left;
+    }
+    .project-item {
+      margin-bottom: 15px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 4px solid #007BFF;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .project-item:hover {
+      background: #e9f7ff;
+      transform: translateX(10px);
+    }
+    .project-item p {
+      margin-bottom: 5px;
+    }
+    .project-item a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+    .project-item a:hover {
+      text-decoration: underline;
+    }
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #444;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <!-- 页眉 -->
+  <!-- 页眉区域 -->
   <header>
     <div class="container">
-      <h1>zhulibo</h1>
+      <h1>zhulibo's personal website</h1>
       <nav>
         <ul>
-          <li><a href="index.html">首页</a></li>
-          <li><a href="#about">关于我</a></li>
-          <li><a href="#projects">项目经验</a></li>
-          <li><a href="#contact">联系方式</a></li>
+          <li><a href="#intro">首页</a></li>
+          <li><a href="#about">我的</a></li>
+          <li><a href="#projects">项目展示</a></li>
+          <li><a href="#contact">联系我</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- 欢迎部分 -->
-  <section id="intro" class="container">
-    <h2>欢迎来到我的个人主页</h2>
-    <p>这里展示了我的教育背景、开发经验以及算法项目经历。</p>
-  </section>
-
-  <!-- 个人信息 -->
-  <section id="about" class="container">
-    <h2>关于我</h2>
-    <p>姓名：朱力波&nbsp;&nbsp;&nbsp;性别：男</p>
-    <p>邮箱：2295894399@qq.com</p>
-    <p>学校：上海大学&nbsp;&nbsp;&nbsp;专业：智能科学与技术&nbsp;&nbsp;&nbsp;年级：大三</p>
-  </section>
-
-  <!-- 开发项目经验 -->
-  <section id="dev-projects" class="container">
-    <h2>开发项目经验</h2>
-    <div class="card-container">
-      <!-- 项目卡片：铜韵慧识 (开发版) -->
-      <div class="card">
-        <h3>铜韵慧识 (开发版)</h3>
-        <p>古青铜智能鉴定与学习平台，侧重前后端开发实践。</p>
-        <a href="projects/project1.html">了解详情</a>
+  <div class="container">
+    <!-- 欢迎介绍 -->
+    <section id="intro">
+      <div>
+        <h2>欢迎来到我的世界</h2>
+        <p>在这里你可以探索我的开发实践和算法研究，体验科技与艺术的完美交融。</p>
       </div>
-      <!-- 项目卡片： 多源气象数据可视化分析平台 -->
-      <div class="card">
-        <h3>多源气象数据可视化分析平台</h3>
-        <p>整合历史与实时气象数据，实现丰富的数据可视化功能。</p>
-        <a href="projects/project5.html">了解详情</a>
-      </div>
-    </div>
-  </section>
+      <!-- 有趣的示例图片，可自行替换 -->
+      <img src="https://via.placeholder.com/300x200?text=%E6%9C%89%E8%B6%A3%E7%9A%84%E5%9B%BE%E7%89%87" alt="有趣的图像">
+    </section>
+    <hr>
 
-  <!-- 算法项目经验 -->
-  <section id="algo-projects" class="container">
-    <h2>算法项目经验</h2>
-    <div class="card-container">
-      <!-- 项目卡片： 铜韵慧识 (算法版) -->
-      <div class="card">
-        <h3>铜韵慧识 (算法版)</h3>
-        <p>专注于古青铜分类断代及图像算法实现。</p>
-        <a href="projects/project2.html">了解详情</a>
-      </div>
-      <!-- 项目卡片： 古文物三维重建与数字化研究 -->
-      <div class="card">
-        <h3>古文物三维重建与数字化研究</h3>
-        <p>利用 NeRF 与 3D 重建技术实现文物数字化。</p>
-        <a href="projects/project3.html">了解详情</a>
-      </div>
-      <!-- 项目卡片： 全景图像质量评价算法 -->
-      <div class="card">
-        <h3>全景图像质量评价算法</h3>
-        <p>基于 CNN 的多视口模型，实现图像质量的高精度评价。</p>
-        <a href="projects/project4.html">了解详情</a>
-      </div>
-    </div>
-  </section>
+    <!-- 关于我 -->
+    <section id="about">
+      <h2>关于我</h2>
+      <p><strong>朱力波</strong> | 男 |<a href="mailto:2295894399@qq.com">2295894399@qq.com</a></p>
+      <p>上海大学 | 智能科学与技术 | 大三</p>
+    </section>
+    <hr>
 
-  <!-- 联系方式 -->
-  <section id="contact" class="container">
-    <h2>联系方式</h2>
-    <p>邮箱：2295894399@qq.com</p>
-    <p>电话：13636450864</p>
-  </section>
+    <!-- 开发实践 -->
+    <section id="projects" class="project-section">
+      <h2>开发实践</h2>
+      <div class="project-item">
+        <p><strong>铜韵慧识————古青铜智能鉴定与学习平台</strong></p>
+        <p>前后端协同构建，打造流畅体验与高效数据管理系统。</p>
+        <a href="projects/project1.html">查看详情</a>
+      </div>
+      <div class="project-item">
+        <p><strong>多源气象数据可视化分析平台</strong></p>
+        <p>整合历史与实时气象数据，实现直观交互与数据展示。</p>
+        <a href="projects/project5.html">查看详情</a>
+      </div>
+    </section>
+    <hr>
 
-  <!-- 页脚 -->
+    <!-- 算法研究 -->
+    <section id="algorithm" class="project-section">
+      <h2>算法研究</h2>
+      <div class="project-item">
+        <p><strong>古青铜分类断代算法研究</strong></p>
+        <p>基于深度学习技术，对青铜器图像进行高精度分类与断代分析。</p>
+        <a href="projects/project2.html">查看详情</a>
+      </div>
+      <div class="project-item">
+        <p><strong>古文物三维重建与数字化</strong></p>
+        <p>运用 NeRF 与 3D 重建技术，将历史文物数字化还原。</p>
+        <a href="projects/project3.html">查看详情</a>
+      </div>
+      <div class="project-item">
+        <p><strong>全景图像质量评价算法研究</strong></p>
+        <p>基于 CNN 模型，设计多视口质量评价算法，实现图像质量客观评估。</p>
+        <a href="projects/project4.html">查看详情</a>
+      </div>
+    </section>
+    <hr>
+
+    <!-- 联系方式 -->
+    <section id="contact">
+      <h2>我的</h2>
+      <p>邮箱: <a href="mailto:2295894399@qq.com">2295894399@qq.com</a></p>
+    </section>
+  </div>
+
   <footer>
-    <div class="container">
-      <p>&copy; 2025 朱力波. All Rights Reserved.</p>
-    </div>
+    <p>&copy; 2025 朱力波. All Rights Reserved.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script>
+    // 动态加载项目项示例，每个项目依次淡入
+    document.addEventListener("DOMContentLoaded", function() {
+      const items = document.querySelectorAll('.project-item');
+      items.forEach((item, index) => {
+        item.style.opacity = 0;
+        setTimeout(() => {
+          item.style.transition = 'opacity 0.5s ease-in';
+          item.style.opacity = 1;
+        }, 300 * index);
+      });
+    });
+  </script>
 </body>
 </html>
