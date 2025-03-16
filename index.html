@@ -7,6 +7,176 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/card.css">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    /* 重置样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f8cdda, #1c92d2);
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* 页眉 */
+    header {
+      background: url('https://via.placeholder.com/1200x300?text=%E6%98%A5%E5%AD%A3%E6%B0%B4%E6%99%B6') no-repeat center center;
+      background-size: cover;
+      padding: 40px 0;
+      position: relative;
+    }
+    /* 页眉容器：居中标题，并为头像预留位置 */
+    .header-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      color: #131111;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      position: relative;
+    }
+    /* 标题 */
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    /* 头像样式：圆形，右侧 */
+    .avatar {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    /* 导航 */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav ul li a {
+      color: #3d73cf;
+      text-decoration: none;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* 通用容器 */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    /* 各区块样式 */
+    section {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+    hr {
+      border: 0;
+      height: 2px;
+      background: #ccc;
+      margin: 40px 0;
+    }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    section h3 {
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* 关于我部分：结构化排版 */
+    .personal-info, .tech-stack {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    .personal-info .info-item {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+    .tech-stack ul {
+      list-style: disc inside;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .tech-stack ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Intro区块 - 图片与文字并排 */
+    #intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+    #intro > div {
+      flex: 1;
+    }
+    #intro img {
+      max-width: 300px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    #intro img:hover {
+      transform: scale(1.05);
+    }
+
+    /* 项目列表：左对齐，每个项目占一行 */
+    .project-section {
+      text-align: left;
+    }
+    .project-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 4px solid #007BFF;
+      transition: background 0.3s, transform 0.3s;
+      animation: slideIn 0.5s ease-out;
+    }
+    .project-item:hover {
+      background: #e9f7ff;
+      transform: translateX(10px);
+    }
+    .project-item p {
+      margin-bottom: 5px;
+    }
+    .project-item a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+    .project-item a:hover {
+      text-decoration: underline;
+    }
+
     /* 切换按钮样式 */
     .lang-toggle {
       position: fixed;
@@ -27,6 +197,24 @@
       background-color: #0056b3;
       transform: scale(1.05);
     }
+
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #444;
+      color: #fff;
+    }
+
+    /* 动画 */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
   </style>
 </head>
 <body>
@@ -37,8 +225,9 @@
   <div id="lang-en">
     <!-- Header -->
     <header>
-      <div class="container">
+      <div class="container header-container">
         <h1>zhulibo</h1>
+        <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
         <nav>
           <ul>
             <li><a href="#intro">Home</a></li>
@@ -57,14 +246,29 @@
           <h2>Welcome to zhulibo's personal website</h2>
           <p>Here you can explore my development practices and algorithm research, experiencing the perfect fusion of technology and art.</p>
         </div>
+        <img src="https://via.placeholder.com/300x200" alt="Intro Image">
       </section>
       <hr>
 
       <!-- About Me -->
       <section id="about">
         <h2>About Me</h2>
-        <p><strong>Zhu Libo</strong> | Male | <a href="mailto:2295894399@qq.com">2295894399@qq.com</a></p>
-        <p>Shanghai University | Intelligent Science and Technology | Junior</p>
+        <div class="personal-info">
+          <div class="info-item"><strong>Name:</strong> Zhu Libo</div>
+          <div class="info-item"><strong>Gender:</strong> Male</div>
+          <div class="info-item"><strong>Email:</strong> <a href="mailto:2295894399@qq.com">2295894399@qq.com</a></div>
+          <div class="info-item"><strong>University:</strong> Shanghai University</div>
+          <div class="info-item"><strong>Major:</strong> Intelligent Science and Technology, Junior</div>
+        </div>
+        <h3>Technical Skills</h3>
+        <div class="tech-stack">
+          <ul>
+            <li><strong>Programming Languages &amp; Development Basics:</strong> Proficient in Java (OOP, collections like Map, List, Set), familiar with Python/JavaScript; backend development using Flask/Express/SpringBoot; basic knowledge of Vue3 and Echarts; experienced with browser debugging; familiar with data structures (arrays, linked lists, stacks, queues) and algorithms (sorting, two pointers, sliding window, etc.).</li>
+            <li><strong>Computer Fundamentals:</strong> Knowledgeable in OS process and memory management; TCP/IP networking, HTTP/TCP/IP principles; experienced with MySQL (indexes, transactions, locks) and SQL optimization.</li>
+            <li><strong>Deep Learning &amp; 3D Vision:</strong> Proficient in Python and PyTorch; experience with models like ResNet, ConvNeXt, ViT; expertise in custom network development; familiar with panoramic image projection/inverse projection, viewport extraction, and 2D/3D quality assessment algorithms; understanding of PointNet, PointNet++ and NeRF/3DGS models with experience in creating 3D datasets.</li>
+            <li><strong>Basic Development Skills:</strong> Familiar with Linux bash and vim; version control with Git; proficient in package managers (npm, pip, conda); experience with Docker for deploying large models.</li>
+          </ul>
+        </div>
       </section>
       <hr>
 
@@ -121,12 +325,13 @@
   <div id="lang-zh" style="display: none;">
     <!-- 页眉 -->
     <header>
-      <div class="container">
-        <h1>zlb</h1>
+      <div class="container header-container">
+        <h1>朱力波</h1>
+        <img src="assets/avatar.jpg" alt="头像" class="avatar">
         <nav>
           <ul>
             <li><a href="#intro">首页</a></li>
-            <li><a href="#about">我的</a></li>
+            <li><a href="#about">关于我</a></li>
             <li><a href="#projects">项目展示</a></li>
             <li><a href="#contact">联系方式</a></li>
           </ul>
@@ -141,14 +346,29 @@
           <h2>欢迎来到zlb的个人主页</h2>
           <p>在这里你可以探索我的开发实践和算法研究，体验科技与艺术的完美交融。</p>
         </div>
+        <img src="https://via.placeholder.com/300x200" alt="介绍图片">
       </section>
       <hr>
 
       <!-- 关于我 -->
       <section id="about">
-        <h2>我的</h2>
-        <p><strong>朱力波</strong> | 男 | <a href="mailto:2295894399@qq.com">2295894399@qq.com</a></p>
-        <p>上海大学 | 智能科学与技术 | 大三</p>
+        <h2>关于我</h2>
+        <div class="personal-info">
+          <div class="info-item"><strong>姓名：</strong> 朱力波</div>
+          <div class="info-item"><strong>性别：</strong> 男</div>
+          <div class="info-item"><strong>邮箱：</strong> <a href="mailto:2295894399@qq.com">2295894399@qq.com</a></div>
+          <div class="info-item"><strong>学校：</strong> 上海大学</div>
+          <div class="info-item"><strong>专业：</strong> 智能科学与技术 | 大三</div>
+        </div>
+        <h3>技术栈</h3>
+        <div class="tech-stack">
+          <ul>
+            <li><strong>编程语言与开发基础：</strong> 熟悉 Java 语言（面向对象编程、集合类如 Map、List、Set 等），了解 Python/JavaScript；能基于 Flask/Express/SpringBoot 进行后端开发；了解 Vue3 基础知识及 Echarts 图表绘制；熟练使用浏览器开发者工具进行调试；熟悉常见数据结构（数组、链表、栈、队列）和算法（排序、双指针、滑动窗口等）。</li>
+            <li><strong>计算机基础：</strong> 熟悉操作系统的进程管理和内存管理机制；了解 TCP/IP 网络模型、HTTP/TCP/IP 工作原理；熟悉 MySQL 索引、事务、锁，具备 SQL 调优经验。</li>
+            <li><strong>深度学习与3D视觉：</strong> 熟悉 Python 和 PyTorch 深度学习框架，了解 ResNet、ConvNeXt、ViT 等经典模型源码，有自定义网络经验；熟悉全景图像投影/反投影、视口提取算法及 2D/3D 质量评价算法；了解 PointNet、PointNet++ 等经典 3D 视觉模型，熟悉 NeRF/3DGS 模型，有 3D 数据集制作经验。</li>
+            <li><strong>基本开发技能：</strong> 熟悉 Linux 环境下的 bash 命令及 vim 使用；熟悉 Git 版本控制，了解 npm/pip/conda 包管理器；了解 Docker 的使用，有 Docker 部署大模型的经验。</li>
+          </ul>
+        </div>
       </section>
       <hr>
 
