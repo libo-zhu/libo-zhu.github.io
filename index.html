@@ -1,57 +1,100 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>朱力波 | 智能科学与技术</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/card.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>zhulibo的个人主页</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/card.css">
 </head>
 <body>
-    <!-- 头部导航 -->
-    <header class="glass-header">
-        <nav>
-            <a href="#home">首页</a>
-            <a href="#projects">项目</a>
-            <a href="#contact">联系</a>
-        </nav>
-    </header>
+  <!-- 页眉 -->
+  <header>
+    <div class="container">
+      <h1>zhulibo</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="#about">关于我</a></li>
+          <li><a href="#projects">项目经验</a></li>
+          <li><a href="#contact">联系方式</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- 主内容区 -->
-    <main>
-        <!-- 个人信息卡 -->
-        <section id="home" class="profile-card">
-            <div class="avatar-container">
-                <img src="assets/avatar.jpg" alt="朱力波" class="avatar">
-            </div>
-            <h1>朱力波</h1>
-            <p class="subtitle">上海大学 · 智能科学与技术 · 大三</p>
-            
-            <!-- 技能标签云 -->
-            <div class="skill-cloud">
-                <span class="tag">Java</span>
-                <span class="tag">PyTorch</span>
-                <span class="tag">3D视觉</span>
-                <!-- 更多标签... -->
-            </div>
-        </section>
+  <!-- 欢迎部分 -->
+  <section id="intro" class="container">
+    <h2>欢迎来到我的个人主页</h2>
+    <p>这里展示了我的教育背景、开发经验以及算法项目经历。</p>
+  </section>
 
-        <!-- 项目展示区 -->
-        <section id="projects">
-            <h2>🏆 重点项目</h2>
-            <div class="project-grid" id="projectContainer"></div>
-        </section>
-    </main>
+  <!-- 个人信息 -->
+  <section id="about" class="container">
+    <h2>关于我</h2>
+    <p>姓名：朱力波&nbsp;&nbsp;&nbsp;性别：男</p>
+    <p>邮箱：2295894399@qq.com</p>
+    <p>学校：上海大学&nbsp;&nbsp;&nbsp;专业：智能科学与技术&nbsp;&nbsp;&nbsp;年级：大三</p>
+  </section>
 
-    <!-- 联系页脚 -->
-    <footer id="contact" class="glass-footer">
-        <div class="contact-info">
-            <a href="mailto:2295894399@qq.com" class="email-link">
-                📧 2295894399@qq.com
-            </a>
-        </div>
-    </footer>
+  <!-- 开发项目经验 -->
+  <section id="dev-projects" class="container">
+    <h2>开发项目经验</h2>
+    <div class="card-container">
+      <!-- 项目卡片：铜韵慧识 (开发版) -->
+      <div class="card">
+        <h3>铜韵慧识 (开发版)</h3>
+        <p>古青铜智能鉴定与学习平台，侧重前后端开发实践。</p>
+        <a href="projects/project1.html">了解详情</a>
+      </div>
+      <!-- 项目卡片： 多源气象数据可视化分析平台 -->
+      <div class="card">
+        <h3>多源气象数据可视化分析平台</h3>
+        <p>整合历史与实时气象数据，实现丰富的数据可视化功能。</p>
+        <a href="projects/project5.html">了解详情</a>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- 算法项目经验 -->
+  <section id="algo-projects" class="container">
+    <h2>算法项目经验</h2>
+    <div class="card-container">
+      <!-- 项目卡片： 铜韵慧识 (算法版) -->
+      <div class="card">
+        <h3>铜韵慧识 (算法版)</h3>
+        <p>专注于古青铜分类断代及图像算法实现。</p>
+        <a href="projects/project2.html">了解详情</a>
+      </div>
+      <!-- 项目卡片： 古文物三维重建与数字化研究 -->
+      <div class="card">
+        <h3>古文物三维重建与数字化研究</h3>
+        <p>利用 NeRF 与 3D 重建技术实现文物数字化。</p>
+        <a href="projects/project3.html">了解详情</a>
+      </div>
+      <!-- 项目卡片： 全景图像质量评价算法 -->
+      <div class="card">
+        <h3>全景图像质量评价算法</h3>
+        <p>基于 CNN 的多视口模型，实现图像质量的高精度评价。</p>
+        <a href="projects/project4.html">了解详情</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section id="contact" class="container">
+    <h2>联系方式</h2>
+    <p>邮箱：2295894399@qq.com</p>
+    <p>电话：13636450864</p>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 朱力波. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

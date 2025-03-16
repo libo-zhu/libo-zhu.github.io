@@ -1,46 +1,95 @@
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --glass-bg: rgba(255, 255, 255, 0.95);
-}
+/* css/styles.css */
 
-/* 毛玻璃特效 */
-.glass-header, .glass-footer {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* 个人信息卡片 */
-.profile-card {
+/* 全局基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* 通用容器 */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* 页眉 */
+  header {
+    background-color: #444;
+    color: #fff;
+    padding: 15px 0;
+  }
+  
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 各部分版块 */
+  section {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
     text-align: center;
-    padding: 2rem;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid var(--secondary-color);
-}
-
-/* 项目网格布局 */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-/* 技能标签云 */
-.skill-cloud .tag {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin: 0.3rem;
-    background: var(--secondary-color);
-    color: white;
-    border-radius: 20px;
-    transition: transform 0.3s;
-}
+  }
+  
+  /* 图片区域 */
+  .project-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .project-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* 页脚 */
+  footer {
+    background-color: #444;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
