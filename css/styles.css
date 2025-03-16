@@ -1,95 +1,164 @@
-/* css/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* 全局基础样式 */
+/* 重置样式 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* 通用容器 */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  /* 页眉 */
-  header {
-    background-color: #444;
-    color: #fff;
-    padding: 15px 0;
-  }
-  
-  header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  header h1 {
-    font-size: 24px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* 各部分版块 */
-  section {
-    padding: 40px 0;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 5px;
-  }
-  
-  section h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    text-align: center;
-  }
-  
-  /* 图片区域 */
-  .project-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
-  }
-  
-  .project-images img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  /* 页脚 */
-  footer {
-    background-color: #444;
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* 使用丰富的渐变背景 */
+  background: linear-gradient(135deg, #f8cdda, #1c92d2);
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* 页眉 */
+header {
+  background: url('https://via.placeholder.com/1200x300?text=%E6%98%A5%E5%AD%A3%E6%B0%B4%E6%99%B6') no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+header .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* 导航 */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* 通用容器 */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  /* 半透明白色背景，防止与背景混合 */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* 各区块样式 */
+section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: #ccc;
+  margin: 40px 0;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Intro区块 - 图片与文字并排 */
+#intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+#intro > div {
+  flex: 1;
+}
+
+#intro img {
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+#intro img:hover {
+  transform: scale(1.05);
+}
+
+/* 项目列表：左对齐，每个项目占一行 */
+.project-section {
+  text-align: left;
+}
+
+.project-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-left: 4px solid #007BFF;
+  transition: background 0.3s, transform 0.3s;
+  animation: slideIn 0.5s ease-out;
+}
+
+.project-item:hover {
+  background: #e9f7ff;
+  transform: translateX(10px);
+}
+
+.project-item p {
+  margin-bottom: 5px;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+}
+
+/* 页脚 */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #444;
+  color: #fff;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
