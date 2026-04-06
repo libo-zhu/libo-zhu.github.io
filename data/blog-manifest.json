@@ -2,35 +2,20 @@
   "generatedAt": "2026-04-06",
   "categories": [
     {
-      "slug": "project-review",
-      "name": "项目复盘",
-      "count": 1
-    },
-    {
-      "slug": "tech-notes",
-      "name": "技术笔记",
+      "slug": "java_basic",
+      "name": "Java基础",
       "count": 1
     }
   ],
   "posts": [
     {
-      "slug": "why-i-rebuilt-this-site",
-      "title": "为什么我想把个人主页重构成博客型站点",
-      "summary": "记录这次主页改版的想法，包括内容组织、表达方式和后续持续维护的方向。",
+      "slug": "java-sort-comparator",
+      "title": "Java中通过重写comparator接口中的compare方法进行自定义排序",
+      "summary": "Java中通过重写comparator接口中的compare方法进行自定义排序",
       "date": "2026-04-06",
-      "categorySlug": "project-review",
-      "categoryName": "项目复盘",
-      "path": "content/blog/project-review/why-i-rebuilt-this-site.md",
-      "readingTime": "约 1 分钟"
-    },
-    {
-      "slug": "first-markdown-post",
-      "title": "第一篇 Markdown 博客文章",
-      "summary": "这是一篇示例文章，用来说明新的博客系统如何按分类管理 Markdown 内容。",
-      "date": "2026-04-06",
-      "categorySlug": "tech-notes",
-      "categoryName": "技术笔记",
-      "path": "content/blog/tech-notes/first-markdown-post.md",
+      "categorySlug": "java_basic",
+      "categoryName": "Java基础",
+      "path": "content/blog/java_basic/java-sort-comparator.md",
       "readingTime": "约 1 分钟"
     }
   ]
