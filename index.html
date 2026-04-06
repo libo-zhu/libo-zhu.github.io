@@ -1,296 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>zhulibo's personal website</title>
+  <title>朱力波 | 个人主页</title>
+  <meta name="description" content="朱力波的个人主页，包含个人经历、项目介绍与 Markdown 博客入口。">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <!-- 切换语言按钮 -->
-  <button class="lang-toggle" id="toggle-btn">中文</button>
-
-  <!-- 英文版本 -->
-  <div id="lang-en">
-    <header>
-      <div class="container header-container">
-        <h1>zhulibo</h1>
-        <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
-        <nav>
-          <ul>
-            <li><a href="#intro">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+<body data-page="home">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="index.html">朱力波</a>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="#about">个人介绍</a>
+          <!-- <a href="#journey">个人经历</a> -->
+          <a href="#projects">项目经历</a>
+          <a href="blog.html">个人博客</a>
+          <a href="#contact">联系我</a>
         </nav>
       </div>
     </header>
 
-    <div class="container">
-      <!-- Introduction -->
-      <section id="intro">
-        <div>
-          <h2>Welcome to zhulibo's personal website</h2>
-          <p>Here, I will share with you my learning and practical journey in the field of computer science, covering multi-dimensional experiences such as web development and computer vision algorithms.</p>
-          <p>I hope that through this platform, I can exchange technical insights with like-minded peers and grow together. Now, follow my perspective and embark on this journey filled with code and innovation!</p>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 class="eyebrow">个人主页</h1>
+            <!-- <h1>把研究、开发和表达，整理成一个持续生长的个人空间。</h1> -->
+            <p class="hero-text">
+              本人目前聚焦于前后端开发、计算机视觉以及大模型 Agent 开发。
+              这个主页现在分成两个核心模块：个人经历与个人博客。前者用于系统展示我做过的项目与研究，
+              后者用于沉淀思考、记录技术笔记和阶段复盘。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">查看项目</a>
+              <a class="button button-secondary" href="blog.html">进入博客</a>
+            </div>
+            <!-- <div class="hero-tags" aria-label="关键词">
+              <span>智能科学与技术</span>
+              <span>网页开发</span>
+              <span>计算机视觉</span>
+              <span>三维重建</span>
+            </div> -->
+          </div>
+          <aside class="hero-card">
+            <img src="assets/avatar.jpg" alt="朱力波头像" class="profile-avatar">
+            <ul class="meta-list">
+              <li><span>学校</span><strong>上海大学</strong></li>
+              <li><span>专业</span><strong>智能科学与技术</strong></li>
+              <li><span>方向</span><strong>全栈开发 / AI算法</strong></li>
+            </ul>
+          </aside>
         </div>
       </section>
-      <hr>
 
-      <!-- About Me -->
-      <section id="about">
-        <h2>About Me</h2>
-        <!-- 姓名、学校、专业在同一行显示 -->
-        <div class="personal-info">
-          <div class="info-item"><strong>Name:</strong> Zhu Libo</div>
-          <div class="info-item"><strong>University:</strong> Shanghai University</div>
-          <div class="info-item"><strong>Major:</strong> Intelligent Science and Technology, Junior</div>
-        </div>
-        <h3>Technical Skills</h3>
-        <div class="tech-stack">
-          <ul>
-            <li><strong>Programming Languages &amp; Development Basics:</strong> Proficient in Java (OOP, collections like Map, List, Set), familiar with Python/JavaScript; backend development using Flask/Express/SpringBoot; basic knowledge of Vue3 and Echarts; experienced with browser debugging; familiar with data structures (arrays, linked lists, stacks, queues) and algorithms (sorting, two pointers, sliding window, etc.).</li>
-            <li><strong>Computer Fundamentals:</strong> Knowledgeable in OS process and memory management; TCP/IP networking, HTTP/TCP/IP principles; experienced with MySQL (indexes, transactions, locks) and SQL optimization.</li>
-            <li><strong>Deep Learning &amp; 3D Vision:</strong> Proficient in Python and PyTorch; experience with models like ResNet, ConvNeXt, ViT; expertise in custom network development; familiar with panoramic image projection/inverse projection, viewport extraction, and 2D/3D quality assessment algorithms; understanding of PointNet, PointNet++ and NeRF/3DGS models with experience in creating 3D datasets.</li>
-            <li><strong>Basic Development Skills:</strong> Familiar with Linux bash and vim; version control with Git; proficient in package managers (npm, pip, conda); experience with Docker for deploying large models.</li>
-          </ul>
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">个人介绍</p>
+            <h2>个人介绍</h2>
+            <p>我来自上海大学，目前大四就读，专攻前后端开发以及AI算法研究。</p>
+          </div>
+          <div class="about-grid">
+            <article class="panel">
+              <h3>我在做什么</h3>
+              <p>
+                我主要围绕两个方向展开实践：一类是面向真实场景的应用开发，包括前后端协作、数据可视化与系统落地；
+                另一类是AI算法研究，包括古青铜分类断代、三维重建、全景图像质量评价等。
+              </p>
+            </article>
+            <article class="panel">
+              <h3>我能带来的能力</h3>
+              <ul class="feature-list">
+                <li>具备 Java、Python 等多语言开发经验，能完成从后端到前端的整合实现。</li>
+                <li>熟悉 PyTorch、三维视觉与图像处理流程，能够独立推进算法实验和数据集构建。</li>
+                <li>有项目负责人经历，能够把技术实现、需求推进和表达展示结合起来。</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
-      <hr>
 
-      <!-- Projects -->
-      <section id="projects" class="project-section">
-        <h2>Development Practices</h2>
-        <div class="project-item">
-          <p><strong>Tongyun Huishi（铜韵慧识） — Ancient Bronze Intelligent Identification and Learning Platform</strong></p>
-          <p>Empowering ancient bronze identification and learning through AI technology.
-             It includes four modules: <strong>Ancient Mirror Appraisal, Bronze Encyclopedia, 
-             In-depth Bronze Study, and 3D Reconstruction.</strong> Additionally, <strong>a community platform</strong> has been built, 
-             allowing users to post, like, and collect content,
-              with a large model function provided in the bottom right corner. 
-              <strong>(A national-level innovation and entrepreneurship project, served as the project leader, 
-              and has been used in teaching at the High School Affiliated to Renmin University of China.)</strong></p>
-          <!-- 三张图片展示区域 -->
-          <div class="project-images">
-            <img src="assets/project1_img1.png" alt="Project 1 Image 1">
-            <img src="assets/project1_img2.png" alt="Project 1 Image 2">
-            <img src="assets/project1_img3.png" alt="Project 1 Image 3">
+      <!-- <section class="section muted-section" id="journey">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">个人经历</p>
+            <h2>个人经历</h2>
+            <p>我更在意的是，把每一段经历沉淀为真正可复用的能力。</p>
           </div>
-          <a href="projects/project1.html">View Details</a>
-        </div>
-        <div class="project-item">
-          <p><strong>Multi-source Meteorological Data Visualization and Analysis Platform</strong></p>
-          <p>Build a multi-source meteorological<strong>(historical data + real-time data)</strong>  data visualization platform. 
-            It includes four functional modules: <strong>real-time weather query, historical meteorological data query,
-             life index, and disaster warning</strong>. The front-end uses <strong>Vue3</strong>, the back-end uses <strong>SpringBoot,</strong>
-             <strong>MySQL</strong> for data persistence, and <strong>ECharts</strong> for chart rendering.</p>
-          <div class="project-images">
-            <img src="assets/project5_img1.png" alt="Project 5 Image 1">
-            <img src="assets/project5_img2.png" alt="Project 5 Image 2">
-            <img src="assets/project5_img3.png" alt="Project 5 Image 3">
+          <div class="timeline">
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <p class="timeline-label">学习积累</p>
+                <h3>打基础，建立完整的计算机知识结构</h3>
+                <p>持续学习数据结构、算法、操作系统、计算机网络、数据库与软件工程，为后续开发与研究提供稳定底座。</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <p class="timeline-label">项目实践</p>
+                <h3>从功能实现走向系统化开发</h3>
+                <p>通过多源气象平台、古青铜智能学习平台等项目，逐步形成前后端协同、数据持久化、部署上线与交互设计的完整经验。</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <p class="timeline-label">研究探索</p>
+                <h3>把算法研究与真实场景结合起来</h3>
+                <p>围绕古青铜分类断代、三维重建和图像质量评价开展研究，关注模型效果之外，也关注数据构建、实验设计与最终展示方式。</p>
+              </div>
+            </article>
           </div>
-          <a href="projects/project5.html">View Details</a>
         </div>
+      </section> -->
 
-        <h2>Algorithm Research</h2>
-        <div class="project-item">
-          <p><strong>Research on Ancient Bronze Classification and Dating Algorithms</strong></p>
-          <p>By integrating features such as <strong>contour, vessel shape, and decorative patterns</strong>, 
-            an <strong>end-to-end multi-task</strong> model for the classification and dating of ancient bronzes was constructed, 
-            and <strong>a bronze artifact category-function matrix</strong> was designed to assist the classification task. 
-            Ablation experiments demonstrated that the classification accuracy reached <strong>97.59%</strong> ,
-             and the dating accuracy reached <strong>87.57%</strong> .</p>
-          <div class="project-images">
-            <img src="assets/project2_img1.png" alt="Project 2 Image 1">
-            <img src="assets/project2_img2.png" alt="Project 2 Image 2">
-            <img src="assets/project2_img3.png" alt="Project 2 Image 3">
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">项目经历</p>
+            <h2>项目经历</h2>
+            <p>该部分介绍个人的开发经历和算法研究经历。</p>
           </div>
-          <a href="projects/project2.html">View Details</a>
-        </div>
-        <div class="project-item">
-          <p><strong>3D Reconstruction and Digitization of Ancient Artifacts</strong></p>
-          <p>This project utilizes <strong>FFmpeg, Colmap,</strong> and the open-source <strong>Instant-NGP</strong> model to 
-            perform 3D reconstruction and digital processing of <strong>bronze artifacts 
-            exhibited at Shanghai University</strong>, generating high-precision 3D models.</p>
-          <div class="project-images">
-            <img src="assets/project3_img1.png" alt="Project 3 Image 1">
-            <img src="assets/project3_img2.png" alt="Project 3 Image 2">
-            <img src="assets/project3_img3.png" alt="Project 3 Image 3">
-          </div>
-          <a href="projects/project3.html">View Details</a>
-        </div>
-        <div class="project-item">
-          <p><strong>Research on Panoramic Image Quality Assessment Algorithms</strong></p>
-          <p>A subjective experiment was designed, organizing 16 participants to rate <strong>3,200 viewport images</strong>,
-             thereby constructing a dataset. Based on this, <strong>a weighted multi-viewport CNN algorithm</strong> was developed, 
-             with results showing that the algorithm achieved an SROCC metric of <strong>0.9665</strong>, indicating excellent performance.
 
-          </p>
-          <div class="project-images">
-            <img src="assets/project4_img1.png" alt="Project 4 Image 1">
-            <img src="assets/project4_img2.png" alt="Project 4 Image 2">
-            <img src="assets/project4_img3.png" alt="Project 4 Image 3">
+          <div class="project-group" id="dev-projects">
+            <div class="group-header">
+              <h4>1. 开发实践</h4>
+              <p>偏向系统实现、产品设计与工程落地。</p>
+            </div>
+            <div class="project-grid">
+              <article class="project-card">
+                <img src="assets/project1_img1.png" alt="铜韵慧识项目预览图">
+                <div class="project-body">
+                  <h4>铜韵慧识：古青铜智能鉴定与学习平台</h4>
+                  <p>国家级创新创业项目，我担任项目负责人，完成算法、后端服务、社区功能与平台整合，并已用于课堂教学。</p>
+                  <a href="projects/project1.html">查看详情</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <img src="assets/project5_img1.png" alt="多源气象平台预览图">
+                <div class="project-body">
+                  <h4>多源气象数据可视化分析平台</h4>
+                  <p>基于 Vue3、SpringBoot、MySQL 与 ECharts 搭建，覆盖实时天气、历史查询、生活指数和灾害预警等模块。</p>
+                  <a href="projects/project5.html">查看详情</a>
+                </div>
+              </article>
+            </div>
           </div>
-          <a href="projects/project4.html">View Details</a>
+
+          <div class="project-group" id="algo-projects">
+            <div class="group-header">
+              <h4>2. 算法研究</h4>
+              <p>偏向视觉建模、数据集构建与实验验证。</p>
+            </div>
+            <div class="project-grid">
+              <article class="project-card">
+                <img src="assets/project2_img1.png" alt="古青铜分类断代算法预览图">
+                <div class="project-body">
+                  <h4>古青铜分类断代算法研究</h4>
+                  <p>融合轮廓、器型与纹饰特征，构建端到端多任务模型，分类准确率达到 97.59%，断代准确率达到 87.57%。</p>
+                  <a href="projects/project2.html">查看详情</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <img src="assets/project3_img1.png" alt="古文物三维重建预览图">
+                <div class="project-body">
+                  <h4>古文物三维重建与数字化</h4>
+                  <p>利用 FFmpeg、Colmap 与 Instant-NGP 完成文物三维重建与数字化建模，形成高精度展示结果。</p>
+                  <a href="projects/project3.html">查看详情</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <img src="assets/project4_img1.png" alt="全景图像质量评价预览图">
+                <div class="project-body">
+                  <h4>全景图像质量评价算法研究</h4>
+                  <p>设计主观实验并构建数据集，提出加权多视口 CNN 算法，SROCC 指标达到 0.9665。</p>
+                  <a href="projects/project4.html">查看详情</a>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
-      <hr>
 
-      <!-- Contact -->
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:2295894399@qq.com">2295894399@qq.com</a></p>
+      <section class="section blog-gateway">
+        <div class="container gateway-grid">
+          <div>
+            <p class="eyebrow">个人博客</p>
+            <h2>个人博客</h2>
+            <p>
+              现在博客是这个站点的第二个核心模块。你可以按分类管理文章，文章内容使用 Markdown 编写，
+              页面会自动渲染并在博客页统一展示。
+            </p>
+          </div>
+          <div class="panel">
+            <h3>我为博客准备了什么</h3>
+            <ul class="feature-list">
+              <li>支持按分类展示文章，例如技术笔记、项目复盘、随笔记录等。</li>
+              <li>文章内容直接写成 `.md` 文件，适合长期维护。</li>
+              <li>新增文章后可通过本地脚本自动生成博客索引，避免手动改页面。</li>
+            </ul>
+            <a class="button button-primary" href="blog.html">前往博客页</a>
+          </div>
+        </div>
       </section>
-    </div>
 
-    <footer>
-      <p>&copy; 2025 Zhu Libo. All Rights Reserved.</p>
-    </footer>
-  </div>
+      <section class="section" id="contact">
+        <div class="container contact-card">
+          <div>
+            <p class="eyebrow">联系我</p>
+            <h2>联系我</h2>
+            <p>如果你想交流项目、研究方向或者博客内容，欢迎直接通过邮箱联系我。</p>
+          </div>
+          <a class="contact-link" href="mailto:2295894399@qq.com">2295894399@qq.com</a>
+        </div>
+      </section>
+    </main>
 
-  <!-- 中文版本 -->
-  <div id="lang-zh" style="display: none;">
-    <header>
-      <div class="container header-container">
-        <h1>朱力波</h1>
-        <img src="assets/avatar.jpg" alt="头像" class="avatar">
-        <nav>
-          <ul>
-            <li><a href="#intro">首页</a></li>
-            <li><a href="#about">我的</a></li>
-            <li><a href="#projects">项目展示</a></li>
-            <li><a href="#contact">联系方式</a></li>
-          </ul>
-        </nav>
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© 2026 朱力波</p>
+        <p>个人主页 · 项目展示 · Markdown 博客</p>
       </div>
-    </header>
-
-    <div class="container">
-      <!-- 欢迎介绍 -->
-      <section id="intro">
-        <div>
-          <h2>欢迎来到zlb的个人主页</h2>
-          <p>在这里，我将与您分享我在计算机领域的学习与实践历程，涵盖web开发、计算机视觉算法等多维度经验。</p>
-          <p>希望通过这个平台，与志同道合的伙伴交流技术见解，共同成长。接下来，请跟随我的视角，开启这段充满代码与创新的旅程吧！</p>
-        </div>
-      </section>
-      <hr>
-
-      <!-- 关于我 -->
-      <section id="about">
-        <h2>我的</h2>
-        <div class="personal-info">
-          <div class="info-item"><strong>姓名：</strong> 朱力波</div>
-          <div class="info-item"><strong>学校：</strong> 上海大学</div>
-          <div class="info-item"><strong>专业：</strong> 智能科学与技术</div>
-        </div>
-        <h3>技术栈</h3>
-        <div class="tech-stack">
-          <ul>
-            <li><strong>编程语言与开发基础：</strong> 熟悉 Java 语言（面向对象编程、集合类如 Map、List、Set 等），了解 Python/JavaScript；能基于 Flask/Express/SpringBoot 进行后端开发；了解 Vue3 基础知识及 Echarts 图表绘制；熟练使用浏览器开发者工具进行调试；熟悉常见数据结构（数组、链表、栈、队列）和算法（排序、双指针、滑动窗口等）。</li>
-            <li><strong>计算机基础：</strong> 熟悉操作系统的进程管理和内存管理机制；了解 TCP/IP 网络模型、HTTP/TCP/IP 工作原理；熟悉 MySQL 索引、事务、锁，具备 SQL 调优经验。</li>
-            <li><strong>深度学习与3D视觉：</strong> 熟悉 Python 和 PyTorch 深度学习框架，了解 ResNet、ConvNeXt、ViT 等经典模型源码，有自定义网络经验；熟悉全景图像投影/反投影、视口提取算法及 2D/3D 质量评价算法；了解 PointNet、PointNet++ 等经典 3D 视觉模型，熟悉 NeRF/3DGS 模型，有 3D 数据集制作经验。</li>
-            <li><strong>基本开发技能：</strong> 熟悉 Linux 环境下的 bash 命令及 vim 使用；熟悉 Git 版本控制，了解 npm/pip/conda 包管理器；了解 Docker 的使用，有 Docker 部署大模型的经验。</li>
-          </ul>
-        </div>
-      </section>
-      <hr>
-
-      <!-- 项目展示 -->
-      <section id="projects" class="project-section">
-        <h2>开发实践</h2>
-        <div class="project-item">
-          <p><strong>铜韵慧识————古青铜智能鉴定与学习平台</strong></p>
-          <p>通过AI 技术赋能古青铜鉴定与学习。包含<strong>铜镜鉴古、青铜宝典、深入青铜、三维重建</strong>4 个模块。同时，
-            构建了一个<strong>交流社区</strong>，允许用户发布帖子、点赞、收藏等，并在右下角提供<strong>大模型功能</strong>。<strong>(国家级创新创业项目，担任项
-            目负责人，已用于人大附中课堂教学)</strong></p>
-          <div class="project-images">
-            <img src="assets/project1_img1.png" alt="项目1图片1">
-            <img src="assets/project1_img2.png" alt="项目1图片2">
-            <img src="assets/project1_img3.png" alt="项目1图片3">
-          </div>
-          <a href="projects/project1.html">查看详情</a>
-        </div>
-        <div class="project-item">
-          <p><strong>多源气象数据可视化分析平台</strong></p>
-          <p>构建一个多源气象（历史数据+实时数据）数据可视化平台。包含<strong>实时天气查询、历史气象数据查询、生活
-            指数、灾害预警</strong>4 个模型功能。前端使用<strong>vue3</strong>,后端使用<strong>SpringBoot,MySQL</strong>用于数据持久化，以及<strong>>Echarts</strong>用于图表的
-            绘制。</p>
-          <div class="project-images">
-            <img src="assets/project5_img1.png" alt="项目5图片1">
-            <img src="assets/project5_img2.png" alt="项目5图片2">
-            <img src="assets/project5_img3.png" alt="项目5图片3">
-          </div>
-          <a href="projects/project5.html">查看详情</a>
-        </div>
-
-        <h2>算法研究</h2>
-        <div class="project-item">
-          <p><strong>古青铜分类断代算法研究</strong></p>
-          <p>通过融合<strong>轮廓、器型、纹饰特征</strong>，构建古青铜分类与断代的<strong>端到端多任务</strong>模型，并设计青铜器
-            <strong>类别-功能矩阵</strong>辅助分类任务。通过消融实验表明：分类准确率为<strong>97.59%</strong>，断代准确率为<strong>87.57%</strong>。</p>
-          <div class="project-images">
-            <img src="assets/project2_img1.png" alt="项目2图片1">
-            <img src="assets/project2_img2.png" alt="项目2图片2">
-            <img src="assets/project2_img3.png" alt="项目2图片3">
-          </div>
-          <a href="projects/project2.html">查看详情</a>
-        </div>
-        <div class="project-item">
-          <p><strong>古文物三维重建与数字化</strong></p>
-          <p>本项目利用 <strong>FFmpeg、Colmap</strong> 及开源 <strong>Instant-NGP 模型</strong>，
-            对<strong>上海大学展出的青铜文物</strong>进行三维重建与数字化处理，生成高精度的 3D 模型。</p>
-          <div class="project-images">
-            <img src="assets/project3_img1.png" alt="项目3图片1">
-            <img src="assets/project3_img2.png" alt="项目3图片2">
-            <img src="assets/project3_img3.png" alt="项目3图片3">
-          </div>
-          <a href="projects/project3.html">查看详情</a>
-        </div>
-        <div class="project-item">
-          <p><strong>全景图像质量评价算法研究</strong></p>
-          <p>    设计主观实验，组织16 个实验人员对<strong>3200 个视口图像</strong>进行评分，构建数据集；在此基础上，设计
-            <strong>加权多视口的CNN 算法</strong> ，结果显示该算法的<strong>SROCC 指标为0.9665</strong>，结果较好。</p>
-          <div class="project-images">
-            <img src="assets/project4_img1.png" alt="项目4图片1">
-            <img src="assets/project4_img2.png" alt="项目4图片2">
-            <img src="assets/project4_img3.png" alt="项目4图片3">
-          </div>
-          <a href="projects/project4.html">查看详情</a>
-        </div>
-      </section>
-      <hr>
-
-      <!-- 联系方式 -->
-      <section id="contact">
-        <h2>联系方式</h2>
-        <p>邮箱: <a href="mailto:2295894399@qq.com">2295894399@qq.com</a></p>
-      </section>
-    </div>
-
-    <footer>
-      <p>&copy; 2025 zlb. All Rights Reserved.</p>
     </footer>
   </div>
 
-  <script>
-    const toggleBtn = document.getElementById('toggle-btn');
-    const langEn = document.getElementById('lang-en');
-    const langZh = document.getElementById('lang-zh');
-
-    toggleBtn.addEventListener('click', () => {
-      if (langEn.style.display === 'none') {
-        langEn.style.display = 'block';
-        langZh.style.display = 'none';
-        toggleBtn.textContent = '中文';
-      } else {
-        langEn.style.display = 'none';
-        langZh.style.display = 'block';
-        toggleBtn.textContent = 'English';
-      }
-    });
-  </script>
   <script src="js/script.js"></script>
 </body>
 </html>

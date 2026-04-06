@@ -1,7 +1,14 @@
-/* js/script.js */
-// 页面交互逻辑示例
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("页面加载完成");
-    // 可在此处添加更多交互逻辑，如动画、数据加载等
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".site-nav a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("#")) {
+      return;
+    }
+
+    const linkPath = href.split("/").pop();
+    if (linkPath === currentPath) {
+      link.setAttribute("aria-current", "page");
+    }
   });
-  
+});

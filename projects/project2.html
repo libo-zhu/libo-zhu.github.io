@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>基于深度学习的古青铜分类断代</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/card.css">
 </head>
 <body>
-  <!-- 页眉 -->
-  <header>
-    <div class="container">
-      <h1>基于深度学习的古青铜分类断代</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">首页</a></li>
-          <li><a href="../index.html#algo-projects">返回算法项目列表</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="../index.html">朱力波</a>
+        <nav class="site-nav" aria-label="项目页导航">
+          <a href="../index.html">主页</a>
+          <a href="../index.html#algo-projects">算法研究</a>
+          <a href="../blog.html">个人博客</a>
+        </nav>
+      </div>
+    </header>
 
-  <!-- 项目详情 -->
-  <section id="project-detail" class="container">
-    <h2>项目简介</h2>
-    <p>
-      通过融合轮廓、器型、纹饰特征，构建古青铜分类与断代的端到端多任务模型，并设计青铜器
-类别-功能矩阵辅助分类任务。通过消融实验表明：分类准确率为97.59%，断代准确率为87.57%。
-    </p>
-    <h3>技术栈</h3>
-    <p>核心算法：Pytorch、Python、Numpy</p>
-    <h3>主要职责</h3>
-    <ul>
-      <li>对青铜器图像及标签数据进行爬虫与数据清洗，得到10956 张青铜图片标签数据；</li>
-      <li>设计古青铜分类断代的特征提取模块，包括轮廓特征、器型特征和纹饰特征三个分支；</li>
-      <li>分别设计分类头和断代头，在分类头中，设计青铜器类别-功能矩阵辅助青铜器分类。</li>
-    </ul>
-
-    <!-- 图片展示区域 -->
-    <!-- <h3>项目图片</h3>
-    <p>在 <code>assets/project2</code> 目录下添加算法相关图片，按需扩展 <code>&lt;img&gt;</code> 标签。</p>
-    <div class="project-images"> -->
-      <!-- 示例图片标签 -->
-      <!-- <img src="../assets/project2/placeholder.jpg" alt="项目算法图片示例"> -->
-      <!-- 可扩展更多图片 -->
-    <!-- </div> -->
-  </section>
+    <main>
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">项目详情</p>
+          <h1>古青铜分类断代算法研究</h1>
+        </div>
+        <section id="project-detail" class="container">
+          <h2>项目简介</h2>
+          <p>
+            通过融合轮廓、器型、纹饰特征，构建古青铜分类与断代的端到端多任务模型，并设计青铜器类别功能矩阵辅助分类任务。
+            消融实验结果表明，分类准确率达到 97.59%，断代准确率达到 87.57%。
+          </p>
+          <div class="project-images">
+            <img src="../assets/project2_img1.png" alt="古青铜分类断代图一">
+            <img src="../assets/project2_img2.png" alt="古青铜分类断代图二">
+            <img src="../assets/project2_img3.png" alt="古青铜分类断代图三">
+          </div>
+          <h3>技术栈</h3>
+          <p>核心算法：PyTorch、Python、NumPy</p>
+          <h3>主要职责</h3>
+          <ul>
+            <li>完成青铜器图像及标签数据的爬取和清洗，整理出 10956 张带标签的训练数据。</li>
+            <li>设计轮廓特征、器型特征和纹饰特征三条分支，构建分类断代的特征提取模块。</li>
+            <li>分别设计分类头和断代头，并在分类头中引入青铜器类别功能矩阵提升分类效果。</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </div>
 
   <script src="../js/script.js"></script>
 </body>

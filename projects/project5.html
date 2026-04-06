@@ -1,53 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>多源气象数据可视化分析平台</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/card.css">
 </head>
 <body>
-  <!-- 页眉 -->
-  <header>
-    <div class="container">
-      <h1>多源气象数据可视化分析平台</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">首页</a></li>
-          <li><a href="../index.html#dev-projects">返回开发项目列表</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="../index.html">朱力波</a>
+        <nav class="site-nav" aria-label="项目页导航">
+          <a href="../index.html">主页</a>
+          <a href="../index.html#dev-projects">开发实践</a>
+          <a href="../blog.html">个人博客</a>
+        </nav>
+      </div>
+    </header>
 
-  <!-- 项目详情 -->
-  <section id="project-detail" class="container">
-    <h2>项目简介</h2>
-    <p>
-      构建一个多源气象（历史数据+实时数据）数据可视化平台。包含实时天气查询、历史气象数据查询、生活
-指数、灾害预警4 个模型功能。前端使用vue3,后端使用SpringBoot,MySQL 用于数据持久化，以及Echarts 用于图表的
-绘制。
-    </p>
-    <h3>技术栈</h3>
-    <p>前端：Vue3 / HTML5 / CSS3 / JavaScript<br>后端：SpringBoot / MySQL<br>图表：Echarts</p>
-    <h3>主要职责</h3>
-    <ul>
-      <li>对中国气象局进行数据的爬虫，得到30 万条历史数据，包括城市、日期、最高气温、最低气温、风向信息；</li>
-      <li>使用高德地图、易客天气API，获取实时的天气预报、生活指数、灾害预警，并使用Echarts 实现
-        折线图、饼图、热力图、雷达图等多种可视化方式；</li>
-      <li>使用SpringBoot+MySQL，实现登录注册功能，以及历史数据的持久化与检索。</li>
-    </ul>
-
-    <!-- 图片展示区域 -->
-    <!-- <h3>项目图片</h3>
-    <p>请在 <code>assets/project5</code> 目录下添加项目图片，按需扩展 <code>&lt;img&gt;</code> 标签。</p> -->
-    <!-- <div class="project-images"> -->
-      <!-- 示例图片标签 -->
-      <!-- <img src="../assets/project5/placeholder.jpg" alt="项目气象平台图片示例"> -->
-      <!-- 可扩展更多图片 -->
-    <!-- </div> -->
-  </section>
+    <main>
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">项目详情</p>
+          <h1>多源气象数据可视化分析平台</h1>
+        </div>
+        <section id="project-detail" class="container">
+          <h2>项目简介</h2>
+          <p>
+            构建多源气象数据可视化平台，整合历史数据与实时数据，覆盖实时天气查询、历史气象查询、生活指数和灾害预警等模块。
+            前端使用 Vue3，后端使用 SpringBoot 与 MySQL，并结合 ECharts 完成多维数据展示。
+          </p>
+          <div class="project-images">
+            <img src="../assets/project5_img1.png" alt="多源气象平台图一">
+            <img src="../assets/project5_img2.png" alt="多源气象平台图二">
+            <img src="../assets/project5_img3.png" alt="多源气象平台图三">
+          </div>
+          <h3>技术栈</h3>
+          <p>前端：Vue3、HTML5、CSS3、JavaScript<br>后端：SpringBoot、MySQL<br>图表：ECharts</p>
+          <h3>主要职责</h3>
+          <ul>
+            <li>爬取中国气象局数据，整理出 30 万条历史记录，包括城市、日期、最高气温、最低气温与风向信息。</li>
+            <li>结合高德地图与天气接口获取实时天气、生活指数和灾害预警，并使用 ECharts 实现折线图、饼图、热力图和雷达图等展示。</li>
+            <li>使用 SpringBoot 与 MySQL 完成登录注册、历史数据持久化以及检索能力。</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </div>
 
   <script src="../js/script.js"></script>
 </body>

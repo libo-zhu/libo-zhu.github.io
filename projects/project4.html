@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>全景图像质量评价算法</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/card.css">
 </head>
 <body>
-  <!-- 页眉 -->
-  <header>
-    <div class="container">
-      <h1>全景图像质量评价算法</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">首页</a></li>
-          <li><a href="../index.html#algo-projects">返回算法项目列表</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="../index.html">朱力波</a>
+        <nav class="site-nav" aria-label="项目页导航">
+          <a href="../index.html">主页</a>
+          <a href="../index.html#algo-projects">算法研究</a>
+          <a href="../blog.html">个人博客</a>
+        </nav>
+      </div>
+    </header>
 
-  <!-- 项目详情 -->
-  <section id="project-detail" class="container">
-    <h2>项目简介</h2>
-    <p>
-      设计主观实验，组织16 个实验人员对3200 个视口图像进行评分，构建数据集；在此基础上，设计
-加权多视口的CNN 算法，结果显示该算法的SROCC 指标为0.9665，结果较好。
-    </p>
-    <h3>技术栈</h3>
-    <p>工具：Pytorch / Scikit-learn / Numpy / Matplotlib<br>语言：Python</p>
-    <h3>主要职责</h3>
-    <ul>
-      <li>针对OIQA 数据集，设计视口提取算法，对每张全景图像提取10 个视口，共3200 张视口图像；</li>
-      <li>设计主观实验，并对16 个实验人员进行主观实验，记录实验结果，计算mos 值；</li>
-      <li>使用ConvNeXt 预训练模型，设计10 个视口通道，并通过赤道理论对各通道赋予不同权重进行训练和预测。</li>
-    </ul>
-
-    <!-- 图片展示区域 -->
-    <!-- <h3>项目图片</h3>
-    <p>请在 <code>assets/project4</code> 目录下添加项目相关图片，并按需增加 <code>&lt;img&gt;</code> 标签。</p> -->
-    <!-- <div class="project-images"> -->
-      <!-- 示例图片标签 -->
-      <!-- <img src="../assets/project4/placeholder.jpg" alt="项目质量评价图片示例"> -->
-      <!-- 可扩展更多图片 -->
-    <!-- </div> -->
-  </section>
+    <main>
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">项目详情</p>
+          <h1>全景图像质量评价算法研究</h1>
+        </div>
+        <section id="project-detail" class="container">
+          <h2>项目简介</h2>
+          <p>
+            通过设计主观实验，组织 16 名实验人员对 3200 个视口图像进行评分，构建质量评价数据集；
+            在此基础上提出加权多视口 CNN 算法，最终 SROCC 指标达到 0.9665。
+          </p>
+          <div class="project-images">
+            <img src="../assets/project4_img1.png" alt="全景图像质量评价图一">
+            <img src="../assets/project4_img2.png" alt="全景图像质量评价图二">
+            <img src="../assets/project4_img3.png" alt="全景图像质量评价图三">
+          </div>
+          <h3>技术栈</h3>
+          <p>工具：PyTorch、Scikit-learn、NumPy、Matplotlib<br>语言：Python</p>
+          <h3>主要职责</h3>
+          <ul>
+            <li>针对 OIQA 数据集设计视口提取算法，对每张全景图像提取 10 个视口，共形成 3200 张视口图像。</li>
+            <li>设计并组织 16 人参与的主观实验，记录评分结果并计算 MOS 值。</li>
+            <li>基于 ConvNeXt 预训练模型设计 10 个视口通道，并结合赤道理论设置通道权重进行训练和预测。</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </div>
 
   <script src="../js/script.js"></script>
 </body>
