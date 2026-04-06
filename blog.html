@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>个人博客 | 朱力波</title>
+  <meta name="description" content="朱力波的个人博客，支持按分类浏览 Markdown 文章。">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="blog">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="index.html">朱力波</a>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="index.html#about">个人介绍</a>
+          <!-- <a href="index.html#journey">个人经历</a> -->
+          <a href="index.html#projects">项目经历</a>
+          <a href="blog.html" aria-current="page">个人博客</a>
+          <a href="index.html#contact">联系我</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section blog-hero">
+        <div class="container">
+          <p class="eyebrow">博客目录</p>
+          <h1>个人博客</h1>
+          <p class="blog-hero-text">
+            这里会持续记录技术笔记、项目复盘和阶段性思考。
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container blog-layout">
+          <aside class="blog-sidebar panel">
+            <h2>分类导航</h2>
+            <div id="category-list" class="chip-list" aria-live="polite"></div>
+            <!-- <div class="blog-sidebar-note">
+              <h3>写作方式</h3>
+              <p>文章保存在 `content/blog/` 下，每个分类对应一个文件夹，支持直接写 Markdown。</p>
+            </div> -->
+          </aside>
+
+          <section class="blog-main">
+            <div class="blog-toolbar">
+              <div>
+                <p class="eyebrow">文章列表</p>
+                <h2 id="blog-list-title">全部文章</h2>
+              </div>
+              <p id="blog-list-meta" class="blog-list-meta"></p>
+            </div>
+            <div id="post-list" class="post-list" aria-live="polite"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© 2026 朱力波</p>
+        <p>个人博客持续更新中</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/blog.js"></script>
+</body>
+</html>

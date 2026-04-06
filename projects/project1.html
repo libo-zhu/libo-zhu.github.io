@@ -1,56 +1,55 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>铜韵慧识————古青铜智能鉴定与学习平台</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/card.css">
 </head>
 <body>
-  <!-- 页眉 -->
-  <header>
-    <div class="container">
-      <h1>铜韵慧识————古青铜智能鉴定与学习平台</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">首页</a></li>
-          <li><a href="../index.html#dev-projects">返回开发项目列表</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="../index.html">朱力波</a>
+        <nav class="site-nav" aria-label="项目页导航">
+          <a href="../index.html">主页</a>
+          <a href="../index.html#dev-projects">开发实践</a>
+          <a href="../blog.html">个人博客</a>
+        </nav>
+      </div>
+    </header>
 
-  <!-- 项目详情 -->
-  <section id="project-detail" class="container">
-    <h2>项目简介</h2>
-    <p>
-      通过AI 技术赋能古青铜鉴定与学习。包含铜镜鉴古、青铜宝典、深入青铜、三维重建4 个模块。同时，
-构建了一个交流社区，允许用户发布帖子、点赞、收藏等，并在右下角提供大模型功能。(国家级创新创业项目，担任项
-目负责人，已用于人大附中课堂教学)
-    </p>
-    <h3>技术栈</h3>
-    <p>前端：Vue、HTML5、CSS3、JavaScript<br>后端：Express、Flask、MySQL<br>其他：NGINX、Docker 等</p>
-    <h3>主要职责</h3>
-    <ul>
-      <li>设计并实现古青铜分类断代算法，纹饰特征检测算法，NeRF 重建算法；</li>
-      <li>对青铜器图像及标签数据进行爬虫与数据清洗，得到10956 张青铜图片标签数据；</li>
-      <li>设计15 张数据库表格，实现算法预测结果、青铜器数据、大模型输入输出的持久化，以及实现
-        发布帖子、点赞、收藏等的功能；用docker 部署智谱大模型。</li>
-      <li>使用Flask 部署分类断代算法的后端服务，使用Express 部署其他后端服务；</li>
-      <li>使用NGINX 反向代理后端程序，并按照CORS 标准配置网关，解决浏览器跨域问题，
-        确保前端可以在公网环境访问接口。</li>
-    </ul>
-
-    <!-- 图片展示区域 -->
-    <!-- <h3>项目图片</h3>
-    <p>在 <code>assets/project1</code> 目录下添加项目相关图片，按需增加 <code>&lt;img&gt;</code> 标签。</p>
-    <div class="project-images"> -->
-      <!-- 示例图片标签 -->
-      <!-- <img src="../assets/project1/placeholder.jpg" alt="项目开发图片示例"> -->
-      <!-- 可扩展更多图片 -->
-    <!-- </div> -->
-  </section>
+    <main>
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">项目详情</p>
+          <h1>铜韵慧识：古青铜智能鉴定与学习平台</h1>
+        </div>
+        <section id="project-detail" class="container">
+          <h2>项目简介</h2>
+          <p>
+            通过 AI 技术赋能古青铜鉴定与学习，平台包含铜镜鉴古、青铜宝典、深入青铜、三维重建四个模块，同时构建了交流社区，
+            支持发帖、点赞、收藏，并接入大模型功能。该项目为国家级创新创业项目，我担任项目负责人，项目成果已用于课堂教学。
+          </p>
+          <div class="project-images">
+            <img src="../assets/project1_img1.png" alt="铜韵慧识界面图一">
+            <img src="../assets/project1_img2.png" alt="铜韵慧识界面图二">
+            <img src="../assets/project1_img3.png" alt="铜韵慧识界面图三">
+          </div>
+          <h3>技术栈</h3>
+          <p>前端：Vue、HTML5、CSS3、JavaScript<br>后端：Express、Flask、MySQL<br>其他：Nginx、Docker</p>
+          <h3>主要职责</h3>
+          <ul>
+            <li>设计并实现古青铜分类断代算法、纹饰特征检测算法和 NeRF 重建算法。</li>
+            <li>完成青铜器图像及标签数据的爬取与清洗，整理出 10956 张图像标签数据。</li>
+            <li>设计 15 张数据库表，支撑算法结果、青铜器资料、大模型输入输出以及社区互动数据的持久化。</li>
+            <li>使用 Flask 部署分类断代算法服务，使用 Express 部署其余业务服务。</li>
+            <li>使用 Nginx 进行反向代理并按 CORS 规范配置网关，确保前端可稳定访问后端接口。</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </div>
 
   <script src="../js/script.js"></script>
 </body>

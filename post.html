@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文章详情 | 朱力波</title>
+  <meta name="description" content="Markdown 博客文章详情页。">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="post">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="index.html">朱力波</a>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="index.html">主页</a>
+          <a href="blog.html">博客列表</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container article-shell">
+          <div class="article-topbar">
+            <a class="text-link" href="blog.html">返回博客列表</a>
+          </div>
+          <article class="article-card">
+            <header class="article-header">
+              <p id="post-category" class="eyebrow"></p>
+              <h1 id="post-title">加载中...</h1>
+              <div id="post-meta" class="article-meta"></div>
+              <p id="post-summary" class="article-summary"></p>
+            </header>
+            <div id="post-content" class="markdown-body" aria-live="polite">
+              正在加载文章内容...
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© 2026 朱力波</p>
+        <p>博客文章页</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/blog.js"></script>
+</body>
+</html>
